@@ -17,7 +17,7 @@ export class RemoteAuthentication {
         })
         switch(httpResponse.statusCode) {
             case HttpStatusCode.unathorized: throw new InvalidCredentialsError()
-            default: throw new InvalidCredentialsError
+            default: return Promise.resolve()
         }
     } 
 }
